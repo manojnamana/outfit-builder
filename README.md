@@ -1,128 +1,102 @@
 # Outfit Builder App
 
-A modern web application built with Next.js and Material-UI that allows users to create and visualize outfit combinations through a drag-and-drop interface.
+A modern web application that allows users to create and customize outfits by dragging and dropping clothing items onto a canvas. Built with Next.js, TypeScript, and Material-UI.
 
 ## Features
 
-- **Interactive Drag & Drop Interface**: Easily drag clothing items onto the canvas
-- **Grid-Based Layout**: Automatic alignment of clothing items in a neat grid pattern
-- **Visual Feedback**: Real-time visual feedback during drag and drop operations
-- **Outfit Management**:
-  - Save multiple outfit combinations
-  - Add outfits to shopping cart
-  - Reset canvas to start fresh
-- **Responsive Design**: Works seamlessly on different screen sizes
-- **Modern UI**: Clean and intuitive interface using Material-UI components
+- 🎨 Interactive canvas for outfit creation
+- 👕 Drag and drop clothing items
+- 🛒 Shopping cart functionality
+- 📱 Responsive design
+- 🎯 Grid-based positioning system
+- 🔄 Real-time updates
+- 🎨 Modern UI with Material-UI components
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed:
-- Node.js (version 14.0 or higher)
-- npm (usually comes with Node.js)
+- Node.js (v14 or higher)
+- npm or yarn
 
 ## Installation
 
 1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd outfit-builder
-   ```
+```bash
+git clone <repository-url>
+cd outfit
+```
 
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+# or
+yarn install
+```
 
-## Running the Application
+## Running the App Locally
 
 1. Start the development server:
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
+# or
+yarn dev
+```
 
 2. Open your browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
+```
+http://localhost:3000
+```
 
-## Usage Guide
+## How to Use
 
 1. **Creating an Outfit**:
-   - Browse available clothing items in the left sidebar
-   - Drag items onto the canvas
-   - Items will automatically snap to the grid
-   - Arrange items to create your desired outfit
+   - Drag clothing items from the left sidebar onto the canvas
+   - Items will snap to a grid for precise positioning
+   - Multiple items can be added to create a complete outfit
 
-2. **Managing Outfits**:
-   - Click "Save Outfit" to save your current creation
-   - Use "Add to Cart" to save for purchase
-   - Click "Reset" to clear the canvas and start over
+2. **Managing Your Cart**:
+   - Click "Add to Cart" to save your current outfit
+   - View your cart by clicking the shopping cart icon in the top-right corner
+   - Remove items from cart using the delete button
+   - Clear the entire cart using the "Clear Cart" button
 
-3. **Grid System**:
-   - Items automatically align to the grid
-   - Visual guides help with placement
-   - Maintains consistent spacing between items
+3. **Canvas Controls**:
+   - Use the "Reset" button to clear the canvas
+   - "Save Outfit" to save your current creation
+   - "Add to Cart" to add the current outfit to your cart
 
 ## Project Structure
 
 ```
-outfit-builder/
-├── public/
-│   └── clothing/         # Clothing item images
-├── src/
-│   ├── components/       # React components
-│   │   ├── OutfitBuilder.tsx
-│   │   ├── OutfitCanvas.tsx
-│   │   └── ClothingItem.tsx
-│   ├── pages/           # Next.js pages
-│   └── styles/          # CSS styles
-├── package.json
-└── README.md
+src/
+├── components/         # React components
+├── context/           # React context providers
+├── pages/             # Next.js pages
+└── styles/            # Global styles
 ```
 
 ## Technologies Used
 
-- **Next.js**: React framework for production
-- **Material-UI**: UI component library
-- **React DnD**: Drag and drop functionality
-- **TypeScript**: Type safety and better developer experience
+- Next.js
+- TypeScript
+- Material-UI
+- React DnD (Drag and Drop)
+- React Context API
 
-## Development
+## Additional Notes
 
-To contribute to the project:
+- The app uses a grid-based system for item placement
+- All images are optimized using Next.js Image component
+- The cart state is persisted using React Context
+- Responsive design works on both desktop and mobile devices
+
+## Contributing
 
 1. Fork the repository
-2. Create a feature branch
-   ```bash
-   git checkout -b feature/YourFeature
-   ```
-3. Make your changes
-4. Push to your fork and submit a pull request
-
-## Future Enhancements
-
-- Save outfits to local storage
-- User accounts and authentication
-- Share outfits on social media
-- More clothing items and categories
-- Advanced outfit recommendations
-
-## Troubleshooting
-
-1. If images don't load:
-   - Ensure all image files are in the correct directory
-   - Check image paths in the code
-   - Verify file permissions
-
-2. If drag and drop doesn't work:
-   - Clear browser cache
-   - Check console for errors
-   - Ensure React DnD is properly initialized
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-For any additional questions or feedback, please open an issue in the repository.
