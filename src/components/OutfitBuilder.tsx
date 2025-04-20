@@ -69,7 +69,12 @@ const OutfitBuilder = () => {
             p: 2,
             bgcolor: 'white',
             borderRadius: 1,
-            boxShadow: 1
+            boxShadow: 1,
+            maxHeight: '700px',
+            overflow: 'auto',
+            scrollbarWidth: 'none',
+            scrollbarColor: '#888 #f5f5f5'
+
           }}>
             <Grid container spacing={2}>
               {clothingItems.map((item) => (

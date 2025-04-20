@@ -1,4 +1,4 @@
-import { Box, Typography, IconButton, Badge, Drawer, List, ListItem, ListItemText, Button } from '@mui/material';
+import { Box, Typography, IconButton, Badge, Drawer, List, ListItem, ListItemText, Button, Snackbar, Alert     } from '@mui/material';
 import { ShoppingCart as CartIcon, Delete as DeleteIcon } from '@mui/icons-material';
 import { useState } from 'react';
 import { useCart } from '../context/CartContext';
@@ -6,6 +6,8 @@ import Image from 'next/image';
 
 export default function Cart() {
   const [isOpen, setIsOpen] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState('');
   const { cartItems, removeFromCart, clearCart } = useCart();
 
   return (
@@ -100,8 +102,8 @@ export default function Cart() {
                 <Button
                   variant="contained"
                   onClick={() => {
-                    // Implement checkout logic
-                    alert('Proceeding to checkout...');
+                    setSnackbarMessage('Proceeding to checkout...');
+                    setSnackbarOpen(true);
                   }}
                   fullWidth
                 >
@@ -112,6 +114,16 @@ export default function Cart() {
           )}
         </Box>
       </Drawer>
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={3000}
+        onClose={() => setSnackbarOpen(false)}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+      >
+        <Alert severity="success">
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
     </>
   );
 } 

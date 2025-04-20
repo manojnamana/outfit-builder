@@ -32,7 +32,7 @@ const ClothingItem = ({ item }: ClothingItemProps) => {
         width: '100%',
         border: '1px solid #eee',
         borderRadius: 1,
-        p: 3,
+        p: 4,
         transition: 'all 0.2s',
         display: 'flex',
         justifyContent: 'center',
