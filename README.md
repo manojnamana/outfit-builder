@@ -1,40 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Outfit Builder App
 
-## Getting Started
+A modern web application built with Next.js and Material-UI that allows users to create and visualize outfit combinations through a drag-and-drop interface.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Interactive Drag & Drop Interface**: Easily drag clothing items onto the canvas
+- **Grid-Based Layout**: Automatic alignment of clothing items in a neat grid pattern
+- **Visual Feedback**: Real-time visual feedback during drag and drop operations
+- **Outfit Management**:
+  - Save multiple outfit combinations
+  - Add outfits to shopping cart
+  - Reset canvas to start fresh
+- **Responsive Design**: Works seamlessly on different screen sizes
+- **Modern UI**: Clean and intuitive interface using Material-UI components
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (version 14.0 or higher)
+- npm (usually comes with Node.js)
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd outfit-builder
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Running the Application
+
+1. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+2. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+## Usage Guide
+
+1. **Creating an Outfit**:
+   - Browse available clothing items in the left sidebar
+   - Drag items onto the canvas
+   - Items will automatically snap to the grid
+   - Arrange items to create your desired outfit
+
+2. **Managing Outfits**:
+   - Click "Save Outfit" to save your current creation
+   - Use "Add to Cart" to save for purchase
+   - Click "Reset" to clear the canvas and start over
+
+3. **Grid System**:
+   - Items automatically align to the grid
+   - Visual guides help with placement
+   - Maintains consistent spacing between items
+
+## Project Structure
+
+```
+outfit-builder/
+├── public/
+│   └── clothing/         # Clothing item images
+├── src/
+│   ├── components/       # React components
+│   │   ├── OutfitBuilder.tsx
+│   │   ├── OutfitCanvas.tsx
+│   │   └── ClothingItem.tsx
+│   ├── pages/           # Next.js pages
+│   └── styles/          # CSS styles
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: React framework for production
+- **Material-UI**: UI component library
+- **React DnD**: Drag and drop functionality
+- **TypeScript**: Type safety and better developer experience
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Development
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+To contribute to the project:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Fork the repository
+2. Create a feature branch
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes
+4. Push to your fork and submit a pull request
 
-## Learn More
+## Future Enhancements
 
-To learn more about Next.js, take a look at the following resources:
+- Save outfits to local storage
+- User accounts and authentication
+- Share outfits on social media
+- More clothing items and categories
+- Advanced outfit recommendations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## Troubleshooting
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. If images don't load:
+   - Ensure all image files are in the correct directory
+   - Check image paths in the code
+   - Verify file permissions
 
-## Deploy on Vercel
+2. If drag and drop doesn't work:
+   - Clear browser cache
+   - Check console for errors
+   - Ensure React DnD is properly initialized
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For any additional questions or feedback, please open an issue in the repository.
